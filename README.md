@@ -1,13 +1,11 @@
-# Tic Tac Toe Neon
+# Arcane Clash Autobattler
 
-A simple web-based Tic Tac Toe game with a neon-themed interface and a strong AI opponent.
+A mobile-friendly HTML autobattler where you draft three heroes out of ten and watch them fight automatically with flashy effects and unique abilities.
 
-## How to Play
+## Play
+1. Open `index.html` in a modern browser.
+2. Tap or click three heroes in the roster. The **Start Battle** button unlocks once three are selected.
+3. Watch your squad face a randomly drafted enemy team. Each hero fires off its signature ability, with shields, heals, burns, stuns, and more.
+4. Hit **Reset Draft** anytime to try another lineup.
 
-1. Open `index.html` in a web browser.
-2. Click on a cell to place your `X`.
-3. The bot (`O`) will respond immediately with its move.
-4. Get three in a row horizontally, vertically, or diagonally to win.
-5. Click **Restart** to play again.
-
-The bot uses the minimax algorithm and plays optimally.
+The battlefield updates with health bars, active status effects, and a scrolling combat log so you can track the action turn by turn.

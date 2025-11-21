@@ -3,26 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe Neon</title>
+    <title>Arcane Clash Autobattler</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game">
-        <h1 class="title">Tic Tac Toe</h1>
-        <div id="board" class="board">
-            <div class="cell" data-index="0"></div>
-            <div class="cell" data-index="1"></div>
-            <div class="cell" data-index="2"></div>
-            <div class="cell" data-index="3"></div>
-            <div class="cell" data-index="4"></div>
-            <div class="cell" data-index="5"></div>
-            <div class="cell" data-index="6"></div>
-            <div class="cell" data-index="7"></div>
-            <div class="cell" data-index="8"></div>
+    <header class="hero">
+        <div>
+            <p class="eyebrow">Mobile-ready web autobattler</p>
+            <h1>Arcane Clash</h1>
+            <p class="lead">Draft three champions, unleash their unique abilities, and watch the auto-battle unfold with dazzling effects.</p>
         </div>
-        <p id="status" class="status"></p>
-        <button id="restart">Restart</button>
-    </div>
+        <div class="cta">
+            <button id="startButton" disabled>Start Battle</button>
+            <button id="resetButton" class="ghost">Reset Draft</button>
+            <p class="hint">Pick exactly 3 heroes from 10 to form your squad.</p>
+        </div>
+    </header>
+
+    <main class="layout">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Hero Roster</p>
+                    <h2>Select Your Squad</h2>
+                </div>
+                <div class="badge" id="selectionCount">0 / 3 selected</div>
+            </div>
+            <div id="heroGrid" class="hero-grid"></div>
+        </section>
+
+        <section class="panel battle-panel">
+            <div class="panel-header">
+                <div>
+                    <p class="eyebrow">Arena</p>
+                    <h2>Auto Battle</h2>
+                </div>
+                <div class="round" id="roundCounter">Round 0</div>
+            </div>
+            <div class="arena">
+                <div class="team" id="playerTeam">
+                    <h3>Your Team</h3>
+                    <div class="team-list" id="playerSlots"></div>
+                </div>
+                <div class="team" id="enemyTeam">
+                    <h3>Enemy Team</h3>
+                    <div class="team-list" id="enemySlots"></div>
+                </div>
+            </div>
+            <div class="log" id="battleLog"></div>
+        </section>
+    </main>
+
+    <template id="heroCardTemplate">
+        <article class="hero-card">
+            <div class="hero-top">
+                <span class="role"></span>
+                <span class="power"></span>
+            </div>
+            <h4 class="name"></h4>
+            <p class="ability-name"></p>
+            <p class="description"></p>
+            <div class="stats">
+                <span class="stat hp"></span>
+                <span class="stat attack"></span>
+                <span class="stat speed"></span>
+            </div>
+        </article>
+    </template>
+
+    <template id="fighterTemplate">
+        <div class="fighter">
+            <div class="fighter-header">
+                <span class="f-name"></span>
+                <span class="f-role"></span>
+            </div>
+            <div class="health-bar">
+                <div class="health-fill"></div>
+            </div>
+            <div class="status-line"></div>
+        </div>
+    </template>
+
     <script src="script.js"></script>
 </body>
 </html>
